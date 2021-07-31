@@ -15,7 +15,6 @@ public class Jugador2 extends Actor
     public void act()
     {
         movimiento();
-        mouse(); 
         checkFire();
         contador();
     }
@@ -46,12 +45,7 @@ public class Jugador2 extends Actor
 
     }
     
-    public void mouse()
-    {
-        if(Greenfoot.getMouseInfo() !=null)
-        turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-    }
-    
+
     
     public void contador()
     {

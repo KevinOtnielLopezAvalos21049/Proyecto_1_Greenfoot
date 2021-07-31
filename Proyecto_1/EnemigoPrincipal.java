@@ -12,16 +12,15 @@ public class EnemigoPrincipal extends Actor
          * Act - do whatever the Enemigo wants to do. This method is called whenever
          * the 'Act' or 'Run' button gets pressed in the environment.
          */
-    public void tamaño()
-    {
-        GreenfootImage myImage = getImage();
-        int myNewHeight = (int)myImage.getHeight()/2;
-        int myNewWidth = (int)myImage.getWidth()/2;
-        myImage.scale(50,50);
-    }
+        
         
     public void act() { 
+        // Eliminar a los jugadores
+        
         removeTouching(Jugador1.class); 
+        removeTouching(Jugador2.class); 
+        
+        //Parametros de movilidad.
         java.util.List<Jugador1> playersInWorld = getWorld().getObjects(Jugador1.class);
         if (!playersInWorld.isEmpty()) {
             Jugador1 player = playersInWorld.get(0);
@@ -29,6 +28,7 @@ public class EnemigoPrincipal extends Actor
         }
     }
      
+    // Mpvilidad hacia el jugadro 1
     public void moveToPlayer(Jugador1 player) {
         int deltaX = getX() - player.getX();
         int deltaY = getY() - player.getY();
@@ -49,7 +49,11 @@ public class EnemigoPrincipal extends Actor
             }
         }
     }
-
+    
+    public void Rotar()
+    {
+        
+    }
 
 }
 

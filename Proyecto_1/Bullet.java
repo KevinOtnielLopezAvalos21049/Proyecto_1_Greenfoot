@@ -15,7 +15,7 @@ public class Bullet extends Jugador1
     public void act()
     {
        setLocation(getX() + speed, getY());
-       //checkBoundaries();
+       //Barreras();
        destroyEnemies();
        
     }
