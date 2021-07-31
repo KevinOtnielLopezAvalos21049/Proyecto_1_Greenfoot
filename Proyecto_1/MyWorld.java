@@ -61,7 +61,7 @@ public class MyWorld extends World
     public void instrucciones()
     {
         showText("J1 - Movimiento: WASD; Ataque: Espacio", 250, 590);
-        showText("J2 - Movimento: UP,LEFT,DOWN,RIGHT; Ataque: Clic Izquierdo",850,590);
+        showText("J2 - Movimento: UP,LEFT,DOWN,RIGHT; Ataque:L",850,590);
     }
     
     public void act()
