@@ -20,6 +20,7 @@ public class Jugador1 extends Actor
         turnAround();
         Movimiento1();
         contador();
+        //contador1();
         checkFire();
     }
 
@@ -55,6 +56,21 @@ public class Jugador1 extends Actor
                 myWorld.increaseScore();
         }
     }
+    
+    /*
+            public void contador1()
+        {
+        Actor enemigo = getOneIntersectingObject(Enemigo.class);
+        Nivel1A nivel1A = (Nivel1A)getWorld();
+        if(enemigo != null)
+        {
+                nivel1A.removeObject(enemigo);
+                nivel1A.increaseScore1();
+        }
+    }
+    
+    */
+   
     
         public void turnAround()
     {

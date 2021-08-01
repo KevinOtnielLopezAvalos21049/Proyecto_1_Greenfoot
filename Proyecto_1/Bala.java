@@ -16,16 +16,16 @@ public class Bala extends Actor
     {
        destroyEnemies();
        move(10);
+       removeTouching(EnemigoPrincipal2.class);
     }
       
     public void destroyEnemies() 
     {
-        
+    
        Actor enemy = getOneIntersectingObject(EnemigoPrincipal.class);
        if(enemy != null)
        {
             getWorld().removeObject(enemy);
-            getWorld().removeObject(this);
        }
     }
     

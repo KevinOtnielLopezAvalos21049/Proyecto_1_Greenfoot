@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int score = 0;
+    public int score = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,17 +19,21 @@ public class MyWorld extends World
         prepare();
         bienvenida();
         instrucciones();
+        sonido();
     }
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
+        public void act()
+    {
+        showText("Nivel: "+ score,100, 50);
+    }
+
     private void prepare()
     {
         EnemigoPrincipal enemigoPrincipal = new EnemigoPrincipal();
         addObject(enemigoPrincipal,1140,36);
         enemigoPrincipal.setLocation(994,240);
+        EnemigoPrincipal2 enemigoPrincipal2 = new EnemigoPrincipal2();
+        addObject(enemigoPrincipal2,1140,36);
+        enemigoPrincipal2.setLocation(994,240);
         Enemigo enemigo = new Enemigo();
         addObject(enemigo,1180,114);
         enemigoPrincipal.setLocation(1100,95);
@@ -63,16 +67,15 @@ public class MyWorld extends World
         showText("J1 - Movimiento: WASD; Ataque: Espacio", 250, 590);
         showText("J2 - Movimento: UP,LEFT,DOWN,RIGHT; Ataque:L",850,590);
     }
-    
-    public void act()
-    {
-        showText("Nivel: "+ score,100, 50);
-    }
+
     public void increaseScore()
     {
         score = score + 1;
     }
     
-
+    public void sonido()
+    {
+        Greenfoot.playSound("Inicio.wav");
+    }
     
 }

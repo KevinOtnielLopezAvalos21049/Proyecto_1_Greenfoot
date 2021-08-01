@@ -10,6 +10,7 @@ comment3.params=
 comment3.target=void\ contador()
 comment4.params=
 comment4.target=void\ turnAround()
+comment4.text=\r\n\ \ \ \ \ \ \ \ \ \ \ \ public\ void\ contador1()\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ Actor\ enemigo\ \=\ getOneIntersectingObject(Enemigo.class);\r\n\ \ \ \ \ \ \ \ Nivel1A\ nivel1A\ \=\ (Nivel1A)getWorld();\r\n\ \ \ \ \ \ \ \ if(enemigo\ \!\=\ null)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nivel1A.removeObject(enemigo);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nivel1A.increaseScore1();\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ \r\n
 comment5.params=
 comment5.target=void\ checkFire()
 numComments=6

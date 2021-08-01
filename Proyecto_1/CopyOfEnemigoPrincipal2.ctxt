@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=CopyOfEnemigoPrincipal2
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CopyOfEnemigoPrincipal2\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ CopyOfEnemigoPrincipal2\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=player
+comment2.target=void\ moveToPlayer(CopyOfJugador2)
+comment3.params=
+comment3.target=void\ turnAround()
+comment4.params=
+comment4.target=void\ MovimientoEnemigo()
+comment5.params=
+comment5.target=void\ checkFire()
+comment6.params=
+comment6.target=void\ Rotar()
+numComments=7
