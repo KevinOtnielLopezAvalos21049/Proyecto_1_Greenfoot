@@ -39,7 +39,10 @@ public class Jugador2 extends Actor
         {
             setLocation(getX() +  speed ,getY());
         }
-
+        if (Greenfoot.isKeyDown("control"))
+        {
+            turn(3);
+        }
     }
     
 
@@ -59,8 +62,10 @@ public class Jugador2 extends Actor
                 public void checkFire()
         {
            if(Greenfoot.isKeyDown("l")) 
-           {
-               getWorld().addObject(new Dagas(), getX(), getY());
+           {           
+                Bala bala = new Bala(); 
+               getWorld().addObject(bala, getX(), getY());
+               bala.setRotation(getRotation()); 
            }
     }
 }

@@ -14,26 +14,10 @@ public class Bala extends Actor
      */
     public void act()
     {
-       setLocation(getX() + speed, getY());
-       //setLocation(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
-       //Barreras();
        destroyEnemies();
-       
+       move(10);
     }
-    
-    public void checkBoundaries()
-    {
-        if(getX() > getWorld().getWidth() - 1) 
-            getWorld().removeObject(this);
-       else if(getX() < 1) 
-            getWorld().removeObject(this);
-       if(getY() > getWorld().getHeight() - 1) 
-            getWorld().removeObject(this);
-       else if(getY() < 1) 
-            getWorld().removeObject(this);
-    }
-    
-   
+      
     public void destroyEnemies() 
     {
         
@@ -45,5 +29,4 @@ public class Bala extends Actor
        }
     }
     
-    int speed = 10;
 }
