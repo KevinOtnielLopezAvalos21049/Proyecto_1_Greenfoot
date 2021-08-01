@@ -18,12 +18,12 @@ public class Jugador1 extends Actor
     public void act ()
     {
         turnAround();
-        moveAround();
+        Movimiento1();
         contador();
         checkFire();
     }
 
-    public void moveAround()
+    public void Movimiento1()
     {
 
         if(Greenfoot.isKeyDown("w")) 

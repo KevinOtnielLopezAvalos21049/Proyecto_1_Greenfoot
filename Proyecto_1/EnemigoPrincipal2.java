@@ -1,21 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemigo here.
+ * Write a description of class EnemigoPrincipal2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EnemigoPrincipal extends Actor
+public class EnemigoPrincipal2 extends Actor
 {
-    int speed = 10;
-        /**
-         * Act - do whatever the Enemigo wants to do. This method is called whenever
-         * the 'Act' or 'Run' button gets pressed in the environment.
-         */
-        
-        
-    public void act() { 
+    int speed = 10; 
+    /**
+     * Act - do whatever the EnemigoPrincipal2 wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    
+        public void act() { 
         // Eliminar a los jugadores
         MovimientoEnemigo();
         Rotar();
@@ -25,15 +24,15 @@ public class EnemigoPrincipal extends Actor
         removeTouching(Jugador2.class); 
         
         //Parametros de movilidad.
-        java.util.List<Jugador1> playersInWorld = getWorld().getObjects(Jugador1.class);
+        java.util.List<Jugador2> playersInWorld = getWorld().getObjects(Jugador2.class);
         if (!playersInWorld.isEmpty()) {
-            Jugador1 player = playersInWorld.get(0);
+            Jugador2 player = playersInWorld.get(0);
             moveToPlayer(player);
         }
     }
      
     // Mpvilidad hacia el jugadro 1
-    public void moveToPlayer(Jugador1 player) {
+    public void moveToPlayer(Jugador2 player) {
         int deltaX = getX() - player.getX();
         int deltaY = getY() - player.getY();
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -62,20 +61,21 @@ public class EnemigoPrincipal extends Actor
     
         public void MovimientoEnemigo()
     {
-
-        if(Greenfoot.isKeyDown("s")) 
-        {
-            setLocation(getX(),getY() - speed);
-        }    
-        if(Greenfoot.isKeyDown("w")) 
-        {
-            setLocation(getX(),getY() + speed);
-        }
+        
+            if(Greenfoot.isKeyDown("up"))
+            { 
+                setLocation(getX() - speed ,getY());
+            }    
+            if(Greenfoot.isKeyDown("down")) 
+            {
+                setLocation(getX() +  speed ,getY());
+            }
+    
     }
       
         public void checkFire()
     {
-       if(Greenfoot.isKeyDown("space")) 
+       if(Greenfoot.isKeyDown("control")) 
        {
            BalaEnemiga bala = new BalaEnemiga(); 
            getWorld().addObject(bala, getX(), getY());
@@ -90,5 +90,3 @@ public class EnemigoPrincipal extends Actor
         }
     }
 }
-
-

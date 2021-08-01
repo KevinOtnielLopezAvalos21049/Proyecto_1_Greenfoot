@@ -39,9 +39,9 @@ public class Jugador2 extends Actor
         {
             setLocation(getX() +  speed ,getY());
         }
-        if (Greenfoot.isKeyDown("control"))
+        if (Greenfoot.isKeyDown("p"))
         {
-            turn(3);
+            turn(5);
         }
     }
     

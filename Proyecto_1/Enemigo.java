@@ -16,12 +16,6 @@ public class Enemigo extends Actor
 
     public void act()
     {
-        moveAround();
 
     }
-    public void moveAround()
-    {
-        turn(10);
-        
-    } 
 }
