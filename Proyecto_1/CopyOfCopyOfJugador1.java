@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CopyOfJugador1 here.
+ * Write a description of class CopyOfCopyOfJugador1 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CopyOfJugador1 extends Actor
+public class CopyOfCopyOfJugador1 extends Actor
 {
     int speed = 3;
     /**
-     * Act - do whatever the CopyOfJugador1 wants to do. This method is called whenever
+     * Act - do whatever the CopyOfCopyOfJugador1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     // Determinar las reglas de movilidad
@@ -60,14 +60,14 @@ public class CopyOfJugador1 extends Actor
            bala.setRotation(getRotation()); 
        }
     } 
-            public void contador()
-        {
+                public void contador()
+    {
         Actor enemigo = getOneIntersectingObject(Enemigo.class);
-        Nivel1 myWorld = (Nivel1)getWorld();
+        Nivel1Multi myWorld = (Nivel1Multi)getWorld();
         if(enemigo != null)
         {
                 myWorld.removeObject(enemigo);
-                myWorld.increaseScore1();
+                myWorld.increaseScore2();
         }
     }
 

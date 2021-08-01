@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Nivel1Multi extends World
 {
-
+    public int score = 0;
     /**
      * Constructor for objects of class Nivel1Multi.
      * 
@@ -21,31 +21,30 @@ public class Nivel1Multi extends World
     }
             public void act()
     {
-        showText("Nivel: 1", 100, 50);
+        showText("Nivel: "+ score,100, 50);
     }  
-            private void prepare()
+    private void prepare()
     {
-                CopyOfEnemigoPrincipal copyOfEnemigoPrincipal = new CopyOfEnemigoPrincipal();
-        addObject(copyOfEnemigoPrincipal,993,41);
-        CopyOfEnemigoPrincipal copyOfEnemigoPrincipal2 = new CopyOfEnemigoPrincipal();
-        addObject(copyOfEnemigoPrincipal2,984,201);
-        copyOfEnemigoPrincipal2.setLocation(1136,486);
-        copyOfEnemigoPrincipal2.setLocation(1136,486);
-        copyOfEnemigoPrincipal2.setLocation(1102,308);
-        copyOfEnemigoPrincipal.setLocation(922,118);
-        copyOfEnemigoPrincipal2.setLocation(1072,365);
+            CopyOfCopyOfJugador1 copyOfCopyOfJugador1 = new CopyOfCopyOfJugador1();
+        addObject(copyOfCopyOfJugador1,80,500);
+        CopyOfCopyOfEnemigoPrincipal copyOfCopyOfEnemigoPrincipal = new CopyOfCopyOfEnemigoPrincipal();
+        addObject(copyOfCopyOfEnemigoPrincipal,1060,67);
+        copyOfCopyOfEnemigoPrincipal.setLocation(978,154);
+        CopyOfCopyOfEnemigoPrincipal copyOfCopyOfEnemigoPrincipal2 = new CopyOfCopyOfEnemigoPrincipal();
+        addObject(copyOfCopyOfEnemigoPrincipal2,990,264);
+        CopyOfEnemigoPrincipal2 copyOfEnemigoPrincipal2 = new CopyOfEnemigoPrincipal2();
+        addObject(copyOfEnemigoPrincipal2,1141,329);
         CopyOfEnemigoPrincipal2 copyOfEnemigoPrincipal22 = new CopyOfEnemigoPrincipal2();
-        addObject(copyOfEnemigoPrincipal22,924,199);
-        CopyOfEnemigoPrincipal2 copyOfEnemigoPrincipal23 = new CopyOfEnemigoPrincipal2();
-        addObject(copyOfEnemigoPrincipal23,971,304);
+        addObject(copyOfEnemigoPrincipal22,1132,172);
         Enemigo enemigo = new Enemigo();
-        addObject(enemigo,1138,52);
-        CopyOfEnemigoPrincipal2 copyOfEnemigoPrincipal24 = new CopyOfEnemigoPrincipal2();
-        addObject(copyOfEnemigoPrincipal24,1128,152);
-        copyOfEnemigoPrincipal2.setLocation(1164,425);
-        CopyOfJugador1 copyOfJugador1 = new CopyOfJugador1();
-        addObject(copyOfJugador1,54,531);
+        addObject(enemigo,1154,54);
         CopyOfJugador2 copyOfJugador2 = new CopyOfJugador2();
-        addObject(copyOfJugador2,43,455);
+        addObject(copyOfJugador2,280,531);
     }
+
+        public void increaseScore2()
+    {
+        score = score + 1;
+    }
+    
 }

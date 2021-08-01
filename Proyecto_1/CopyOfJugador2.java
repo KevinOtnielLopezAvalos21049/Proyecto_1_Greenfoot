@@ -18,6 +18,7 @@ public class CopyOfJugador2 extends Actor
     {
         movimiento();
         checkFire();
+        contador();
     }
     
     public void movimiento()
@@ -52,5 +53,16 @@ public class CopyOfJugador2 extends Actor
                getWorld().addObject(bala, getX(), getY());
                bala.setRotation(getRotation()); 
            }
+    }
+    
+                public void contador()
+    {
+        Actor enemigo = getOneIntersectingObject(Enemigo.class);
+        Nivel1Multi myWorld = (Nivel1Multi)getWorld();
+        if(enemigo != null)
+        {
+                myWorld.removeObject(enemigo);
+                myWorld.increaseScore2();
+        }
     }
 }

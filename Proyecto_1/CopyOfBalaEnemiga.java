@@ -16,6 +16,7 @@ public class CopyOfBalaEnemiga extends Actor
     {
         removeTouching(CopyOfJugador1.class); 
         removeTouching(CopyOfJugador2.class); 
+        removeTouching(CopyOfCopyOfJugador1.class); 
        Eliminar1();
        Eliminar2();
        move(10);

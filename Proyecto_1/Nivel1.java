@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Nivel1 extends World
 {
-
+    public int score = 0;
     /**
      * Constructor for objects of class Nivel1.
      * 
@@ -21,7 +21,7 @@ public class Nivel1 extends World
     }
         public void act()
     {
-        showText("Nivel: 1", 100, 50);
+        showText("Nivel: "+ score,100, 50);
     }    
         private void prepare()
     {
@@ -41,5 +41,10 @@ public class Nivel1 extends World
         CopyOfJugador1 copyOfJugador1 = new CopyOfJugador1();
         addObject(copyOfJugador1,49,523);
         enemigo.setLocation(1172,46);
+    }
+    
+        public void increaseScore1()
+    {
+        score = score + 1;
     }
 }

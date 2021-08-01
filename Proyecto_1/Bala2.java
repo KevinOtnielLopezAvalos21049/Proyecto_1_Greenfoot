@@ -17,5 +17,6 @@ public class Bala2 extends Actor
        move(10);
        removeTouching(CopyOfEnemigoPrincipal2.class);
        removeTouching(CopyOfEnemigoPrincipal.class);
+       removeTouching(CopyOfCopyOfEnemigoPrincipal.class);
     }
 }
