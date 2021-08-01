@@ -18,6 +18,7 @@ public class Nivel1Multi extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 600, 1); 
         prepare();
+        sonido();
     }
             public void act()
     {
@@ -47,4 +48,8 @@ public class Nivel1Multi extends World
         score = score + 1;
     }
     
+        public void sonido()
+    {
+        Greenfoot.playSound("Inicio.wav");
+    }
 }

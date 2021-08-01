@@ -24,6 +24,11 @@ public class MyWorld extends World
         public void act()
     {
         showText("Nivel: "+ score,100, 50);
+        if (Greenfoot.isKeyDown("1"))
+            Greenfoot.setWorld(new Nivel1());
+
+        if (Greenfoot.isKeyDown("2"))
+            Greenfoot.setWorld(new Nivel1Multi());
     }
 
     private void prepare()
@@ -59,7 +64,7 @@ public class MyWorld extends World
 
     public void bienvenida()
     {
-        showText("Bienvenid@ al primer nivel de Striker!",600,50);
+        showText("Bienvenid@ al tutorial, al completar el nivel puedes avanzar al siguiente.",600,50);
     }
     
     public void instrucciones()
