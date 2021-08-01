@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jugador2 extends Actor
 {
+    int speed = 3;
+    
     /**
      * Act - do whatever the Jugador2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,27 +23,22 @@ public class Jugador2 extends Actor
     
     public void movimiento()
     {
-        int y = getY();
-        int x = getX();
-        if(Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("up")) 
         {
-            y--;
-            
-        }
-        if(Greenfoot.isKeyDown("down"))
+            setLocation(getX(),getY() - speed);
+        }    
+        if(Greenfoot.isKeyDown("down")) 
         {
-            y++;
+            setLocation(getX(),getY() + speed);
         }
         if(Greenfoot.isKeyDown("left"))
+        { 
+            setLocation(getX() - speed ,getY());
+        }    
+        if(Greenfoot.isKeyDown("right")) 
         {
-            x--;
+            setLocation(getX() +  speed ,getY());
         }
-        if(Greenfoot.isKeyDown("right"))
-        {
-         x++;
-        }
-        setLocation(x,y);
-        
 
     }
     

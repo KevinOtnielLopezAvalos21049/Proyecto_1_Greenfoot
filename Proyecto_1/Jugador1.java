@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jugador1 extends Actor
 {
-    
+    int speed = 3;
     /**
      * Act - do whatever the Jugador1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,33 +17,31 @@ public class Jugador1 extends Actor
     
     public void act ()
     {
-        movimeinto();
+        turnAround();
+        moveAround();
         contador();
         checkFire();
     }
-    
-    public void movimeinto()
+
+    public void moveAround()
     {
-        int y = getY();
-        int x = getX();
+
         if(Greenfoot.isKeyDown("w")) 
         {
-            y--;
+            setLocation(getX(),getY() - speed);
         }    
         if(Greenfoot.isKeyDown("s")) 
         {
-            y++;
+            setLocation(getX(),getY() + speed);
         }
         if(Greenfoot.isKeyDown("a"))
         { 
-            x--;
+            setLocation(getX() - speed ,getY());
         }    
         if(Greenfoot.isKeyDown("d")) 
         {
-            x++;
+            setLocation(getX() +  speed ,getY());
         }
-
-        setLocation(x,y);
 
     }
     
@@ -58,7 +56,7 @@ public class Jugador1 extends Actor
         }
     }
     
-        public void mouse()
+        public void turnAround()
     {
         if(Greenfoot.getMouseInfo() !=null)
         turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
@@ -69,7 +67,9 @@ public class Jugador1 extends Actor
     {
        if(Greenfoot.isKeyDown("space")) 
        {
-           getWorld().addObject(new Bullet(), getX(), getY());
+           Bala bala = new Bala(); 
+           getWorld().addObject(bala, getX(), getY());
+           bala.setRotation(getRotation()); 
        }
     } 
     
